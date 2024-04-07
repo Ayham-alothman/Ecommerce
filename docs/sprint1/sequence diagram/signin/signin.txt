@@ -1,0 +1,14 @@
+title signin
+
+
+participant User interface
+participant Controllar
+participant Model
+
+
+User interface->Controllar:getcategoryitem()
+Controllar->Model:getcategoryitemControllar()
+
+Model->Controllar:return token 
+
+Controllar->User interface: return statue request

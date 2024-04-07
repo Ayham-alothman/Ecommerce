@@ -1,0 +1,15 @@
+title signin
+
+participant User
+participant User interface
+participant Controllar
+participant Model
+
+User->User interface:set details info item
+User interface->Controllar:setInfoitem()
+Controllar->Model:setInfoitemContollar()
+
+Model->Controllar: 
+
+Controllar->User interface: return statue request
+ User interface->User: show alert content add item

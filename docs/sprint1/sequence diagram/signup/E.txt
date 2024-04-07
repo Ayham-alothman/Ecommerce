@@ -1,0 +1,15 @@
+title signin
+
+participant User
+participant User interface
+participant Controllar
+participant Model
+
+User->User interface:set info about email and password
+User interface->Controllar:valdiate if there miss data
+Controllar->Model:process data and generate token
+
+Model->Controllar:return token 
+
+Controllar->User interface: return statue request
+ User interface->User: redirct route to home
