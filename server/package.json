@@ -1,0 +1,33 @@
+{
+    "name": "server",
+    "version": "1.0.0",
+    "description": "aaaaaaa",
+    "main": "index.js",
+    "scripts": {
+        "build": "npx tsc",
+        "start": "node dist/app.js",
+        "dev": "nodemon src/app.ts"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "devDependencies": {
+        "ts-node": "^10.9.2",
+        "typescript": "^5.4.3"
+    },
+    "dependencies": {
+        "@types/bcrypt": "^5.0.2",
+        "@types/express": "^4.17.21",
+        "@types/jsonwebtoken": "^9.0.6",
+        "@types/node": "^20.12.5",
+        "@types/pg": "^8.11.5",
+        "bcrypt": "^5.1.1",
+        "bcrypt-ts": "^5.0.2",
+        "body-parser": "^1.20.2",
+        "dotenv": "^16.4.5",
+        "express": "^4.19.2",
+        "jsonwebtoken": "^9.0.2",
+        "pg": "^8.11.5",
+        "ts-postgres": "^2.0.2"
+    }
+}
