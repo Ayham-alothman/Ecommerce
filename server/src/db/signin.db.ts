@@ -10,9 +10,9 @@ async function valditionUser(email:string,password:string){
         if(bcrypt.compareSync(password,r.rows[0].password)){;
           return {name:r.rows[0].name,email:r.rows[0].email}
         }
-        throw `incorrect password`
+        throw new Error(`incorrect password`);
      }
-     throw `do't found email`;
+     throw new Error(`do't found email`);
      }
    catch(e){throw e}
    finally{await client.end()}
