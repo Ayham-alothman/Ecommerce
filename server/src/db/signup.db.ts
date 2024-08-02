@@ -14,18 +14,20 @@ async function signupUser(name:string,email:string,password:string){
          if(emailExsist.rows.length==0){
            const hash=bcrypt.hashSync(password,bcrypt.genSaltSync(10));
            const r=await client
-           .query(`INSERT INTO USERS (NAME,EMAIL,PASSWORD)VALUES($1,$2,$3);`,[name,email,hash]);
-             if(r.rowCount){return{name:name,email:email}}
+           .query(`INSERT INTO USERS (NAME,EMAIL,PASSWORD)VALUES($1,$2,$3) RETURNING *;`,[name,email,hash]);
+             if(r.rowCount){return true}
              throw `there erorr at insert`
              
          }
-         throw `the email exsist before`
+         throw new Error(`the email exsist before`)
         
     }
     catch(e){throw e}
     finally{await client.end()}
 
 }
+
+
 
 
 export {signupUser}

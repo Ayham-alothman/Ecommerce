@@ -1,7 +1,8 @@
 import {Router} from 'express'
-import {signupControllar} from '../controllar/signup.controllar.js'
+import {signupControllar} from '../controllar/signup.controllar.js';
+import { ValditionSignup } from '../middelware/Valdition.Signup.js';
 const routerUrl=Router();
 
-routerUrl.post('/',signupControllar);
+routerUrl.post('/',ValditionSignup,signupControllar);
 
 export default routerUrl;

@@ -5,7 +5,7 @@ interface item{
     name2:string
     
 }
-function ScrollItems(props:{items:item[]}){console.log(props.items) 
+function ScrollItems(props:{items:item[]}){ 
  return(
     <>
      <div className='flex overflow-x-scroll'>
