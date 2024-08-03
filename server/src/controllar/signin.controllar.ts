@@ -1,6 +1,6 @@
 import {Request,Response} from 'express';
 import {sign} from 'jsonwebtoken'
-import {valditionUser} from '../db/signin.db.js'
+import {valditionUser} from '../db/signin.db'
 async function signinControllar(req:Request,res:Response){
    
         try{

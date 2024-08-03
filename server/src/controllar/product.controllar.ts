@@ -1,6 +1,6 @@
 import { Request,Response,NextFunction } from "express";
-import {addProductDB} from '../db/product.db.js';
-import { storageFile } from "../utilty/storagefilesystem.js";
+import {addProductDB} from '../db/product.db';
+import { storageFile } from "../utilty/storagefilesystem";
 
   function addProductContrillar(req:Request,res:Response,next:NextFunction){
   

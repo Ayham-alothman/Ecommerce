@@ -1,6 +1,6 @@
 import {Request,Response} from 'express';
 import {sign} from 'jsonwebtoken'
-import {signupUser} from '../db/signup.db.js'
+import {signupUser} from '../db/signup.db'
   
 async function signupControllar(req:Request,res:Response){
  try{

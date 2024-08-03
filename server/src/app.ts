@@ -24,9 +24,9 @@ app.use(function (req, res, next) {
 
 
 
-import Signup from './routes/signup.router.js';
-import Signin from './routes/signin.router.js';
-import Product from './routes/product.router.js'
+import Signup from './routes/signup.router';
+import Signin from './routes/signin.router';
+import Product from './routes/product.router'
 
 app.use('/signup',Signup);
 app.use('/signin',Signin);
@@ -36,4 +36,3 @@ export default app;
 
 const Port=5000;
 app.listen(Port,()=>{console.log(`listening on port number ${Port}`)})
-console.log('ayham')

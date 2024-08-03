@@ -1,6 +1,6 @@
 import {Router} from 'express'
-import {signinControllar} from '../controllar/signin.controllar.js';
-import { ValditionSignin } from '../middelware/Valdition.Signin.js';
+import {signinControllar} from '../controllar/signin.controllar';
+import { ValditionSignin } from '../middelware/Valdition.Signin';
 const routerUrl=Router();
 
 routerUrl.post('/',ValditionSignin,signinControllar);
